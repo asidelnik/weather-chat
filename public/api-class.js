@@ -5,7 +5,10 @@ class getAPI {
 
    getTemp(cityName) {
       //return the called ajax request without the success function
-      return $.ajax({method: "GET", url: 'https://query.yahooapis.com/v1/public/yql?q=select item.condition ' + 'from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + cityName + '") and u="c"&format=json'})
+      return $.ajax({method: "GET", url: 'https://query.yahooapis.com/v1/public/yql?q=select item.condition ' + 
+      'from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + 
+      cityName + 
+      '") and u="c"&format=json'})
    }
 };
 
