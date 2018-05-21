@@ -13,12 +13,12 @@ class WeatherData {
 
 
    saveToLocalStorage() {
-      localStorage.setItem('weather-chat', JSON.stringify(this.cities));
+      localStorage.setItem(WeatherData.storage_id, JSON.stringify(this.cities));
    }
 
 
    getFromLocalStorage() {
-      return JSON.parse(localStorage.getItem('weather-chat') || '[]');
+      return JSON.parse(localStorage.getItem(WeatherData.storage_id) || '[]');
    }
 
 
@@ -70,6 +70,8 @@ class WeatherData {
    };
 };
 
+
+WeatherData.storage_id = 'weather-chat'
 
 export {
    WeatherData
